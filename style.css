@@ -1,0 +1,60 @@
+*::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(to right, #f33e3e, #e743ce);
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center; /* centraliza todo o conteúdo (faz mágica) */
+    min-height: 100vh; /* irá ocupar 100% da tela verticalmente sempre */
+    grid-template-columns: repeat(4, 100px); /* 4 colunas de 100px cada */
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px); /* mínimo 120px, máximo é dinâmico */
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+}
+
+.calculator-grid > button:hover {
+    background-color: rgba(255, 255, 255, .90) ;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1; /* vai da primeira à última coluna */
+    background-color: rgba(0, 0, 0, .75); 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word; /* quebra uma palavra no meio dela quando não há mais espaço no container */
+    word-break: break-all; /*não só quando chega no final da palavra ou quando tem um space*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+}

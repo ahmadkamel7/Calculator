@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator-grid"> <!-- wrapper da calculadora como um todo -->
+        <div class="output"> <!-- visor -->
+            <div  data-previous-operand class="previous-operand"></div> <!-- parte de cima do visor com o que já foi digitado -->
+            <div data-current-operand class="current-operand"></div> <!-- parte debaixo do visor com o que está sendo digitado -->
+        </div>
+        <button data-all-clear class="span-two">AC</button> <!-- AC = All Clear. Limpa o visor.-->
+        <button data-delete>DEL</button> <!-- DEL = Delete -->
+        <button data-operation>÷</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation>*</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation>+</button>
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-operation>-</button>
+        <button data-number>,</button> <!-- na calculadora, . funciona como um número -->
+        <button data-number>0</button>
+        <button data-equals class="span-two">=</button> <!-- "span-two" porque ocupa o espaço de dois botões -->
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
